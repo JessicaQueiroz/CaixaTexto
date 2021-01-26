@@ -35,6 +35,13 @@
         android:onClick="enviar"
         android:text="ENVIAR" />
 
+    <Button
+        android:id="@+id/bt_limpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="limpar"
+        android:text="LIMPAR" />
+
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="match_parent"

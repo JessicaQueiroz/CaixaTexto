@@ -9,8 +9,12 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class MainActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
 
+public class MainActivity extends AppCompatActivity {
+    private EditText et_nome;
+    private TextInputEditText et_email;
+    private TextView tv_resultado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,13 +22,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enviar(View view){
-        EditText et_nome = findViewById(R.id.et_nome);
-        TextInputEditText et_email = findViewById(R.id.et_email);
-        TextView tv_resultado = findViewById(R.id.tv_resultado);
+        et_nome = findViewById(R.id.et_nome);
+        et_email = findViewById(R.id.et_email);
+        tv_resultado = findViewById(R.id.tv_resultado);
 
         String nome = et_nome.getText().toString();
         String email = et_email.getText().toString();
 
         tv_resultado.setText("Nome: " + nome + " E-mail: " + email);
+    }
+
+    public void limpar(View view){
+        et_nome.setText("");
+        et_email.setText("");
     }
 }
